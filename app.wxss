@@ -1,0 +1,89 @@
+/**app.wxss**/
+@import './style/weui.wxss';
+@import './style/weuibar.wxss';
+@import './style/image.wxss';
+
+.container {
+  height: 100%;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  justify-content: space-between;
+  padding: 200rpx 0;
+  box-sizing: border-box;
+}
+
+/* 公共样式 */
+
+.page {
+  padding: 60rpx 60rpx;
+}
+.circle{border-radius: 50%;}
+.font-pink {
+  color: #ee4d63;
+}
+.font-gray-dark{
+  color:#333333;
+}
+.font-white{
+  color:#fff;
+}
+.font-small{font-size: 24rpx}
+
+.border-pink {
+  border-color: #ee4d63;
+}
+
+.back-pink {
+  background-color: #ee4d63;
+}
+
+button.back-pink::after{border-color: #ee4d63}
+button.border-pink::after{border-color: #ee4d63}
+button.font-white{color: #fff;}
+
+.back-white{background-color: #fff;}
+
+.mt10 {
+  margin-top: 20rpx;
+}
+
+.title-dot {
+  display: inline-block;
+  height: 28rpx;
+  width: 160rpx;
+}
+
+.title {
+  display: inline-block;
+  padding: 0 20rpx;
+}
+
+.tc {
+  text-align: center;
+}
+
+.weui-panel.weui-panel_access::before{border: none;}
+.weui-panel.weui-panel_access::after{border: none;}
+
+/* 制作名片-首页 */
+
+.card-ad {
+  height: 550rpx;
+  color: #fff;
+  font-size: 30rpx;
+  width: 624rpx;
+  /* border: 1px solid #CCC; */
+  border-radius: 10rpx;
+  margin: 20rpx auto auto auto;
+}
+
+.card-ad-top {
+  padding: 40rpx 60rpx 0 60rpx;
+}
+
+.card-ad-center {
+  height: 280rpx;
+  width: 460rpx;
+  margin: 0 auto;
+}

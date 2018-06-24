@@ -1,0 +1,37 @@
+.weui-tabbar {
+    display: flex;
+    position: absolute;
+    z-index: 500;
+    bottom: 0;
+    left:0;
+    width: 100%;
+    background-color: #F7F7FA;
+}
+
+.weui-tabbar__item {
+    display: block;
+    flex: 1;
+    padding: 5px 0 0;
+    font-size: 0;
+    color: Gray;
+    text-align: center;
+}
+.weui-tabbar__item .item_detail{display: inline-block;position: relative;}
+
+.weui-tabbar__icon {
+    display: inline-block;
+    width: 27px;
+    height: 27px;
+    
+}
+.weui-tabbar__icon img {
+        width: 100%;
+        height: 100%;
+    }
+
+.weui-tabbar__label {
+    text-align: center;
+    color: Gray;
+    font-size: 10px;
+    line-height: 1.8;
+}
