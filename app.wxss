@@ -18,17 +18,26 @@
 .page {
   padding: 60rpx 60rpx;
 }
-.circle{border-radius: 50%;}
+
+.circle {
+  border-radius: 50%;
+}
+
 .font-pink {
   color: #ee4d63;
 }
-.font-gray-dark{
-  color:#333333;
+
+.font-gray-dark {
+  color: #333;
 }
-.font-white{
-  color:#fff;
+
+.font-white {
+  color: #fff;
 }
-.font-small{font-size: 24rpx}
+
+.font-small {
+  font-size: 24rpx;
+}
 
 .border-pink {
   border-color: #ee4d63;
@@ -38,33 +47,58 @@
   background-color: #ee4d63;
 }
 
-button.back-pink::after{border-color: #ee4d63}
-button.border-pink::after{border-color: #ee4d63}
-button.font-white{color: #fff;}
+button.back-pink::after {
+  border-color: #ee4d63;
+}
 
-.back-white{background-color: #fff;}
+button.border-pink::after {
+  border-color: #ee4d63;
+}
+
+button.font-white {
+  color: #fff;
+}
+
+.back-white {
+  background-color: #fff;
+}
 
 .mt10 {
   margin-top: 20rpx;
 }
 
+.mt20 {
+  margin-top: 40rpx;
+}
+
+.ml10 {
+  margin-left: 10rpx;
+}
+
 .title-dot {
   display: inline-block;
-  height: 28rpx;
-  width: 160rpx;
+  height: 16rpx;
+  width: 140rpx;
+  border-top: 1px solid;
 }
 
 .title {
   display: inline-block;
   padding: 0 20rpx;
+  font-size: 16pt;
 }
 
 .tc {
   text-align: center;
 }
 
-.weui-panel.weui-panel_access::before{border: none;}
-.weui-panel.weui-panel_access::after{border: none;}
+.weui-panel.weui-panel_access::before {
+  border: none;
+}
+
+.weui-panel.weui-panel_access::after {
+  border: none;
+}
 
 /* 制作名片-首页 */
 
@@ -86,4 +120,59 @@ button.font-white{color: #fff;}
   height: 280rpx;
   width: 460rpx;
   margin: 0 auto;
+}
+
+/* TA的基本资料 */
+
+.weui-cells-pink.weui-cells::before {
+  border: none;
+}
+
+.weui-cells-pink.weui-cells::after {
+  border: none;
+}
+
+.weui-cells-pink .weui-label {
+  width: 90px;
+  padding: 0;
+  text-align: left;
+}
+
+.weui-cells-pink .weui-cell::before {
+  border: none;
+}
+
+.weui-cells-pink .weui-cell::after {
+  border: none;
+}
+
+.weui-cells-pink .weui-select.weui-select_in-select-after {
+  border: none;
+}
+
+.weui-cells-pink .weui-cell {
+  line-height: 140rpx;
+  color: #666;
+}
+
+.weui-cells-pink .weui-cell .weui-select_in-select-after {
+  background-color: #f8f8f8;
+  border: 1rpx solid #ccc;
+  border-radius: 16rpx;
+  padding: 10rpx 20rpx;
+  width: 370rpx;
+}
+
+.weui-cells-pink .weui-cell .weui-input {
+  background-color: #f8f8f8;
+  border: 1rpx solid #ccc;
+  border-radius: 16rpx;
+  padding: 10rpx 20rpx;
+  width: 370rpx;
+}
+
+.weui-cells-pink .weui-cell__ft.info {
+  position: absolute;
+  right: 50rpx;
+  z-index: 2;
 }

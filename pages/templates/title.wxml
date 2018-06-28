@@ -1,0 +1,9 @@
+<template name="title">
+  <view class="tc font-pink">
+    <view class='title-dot pink-dot border-pink'></view>
+    <view class='title'>
+      {{title}}
+    </view>
+    <view class='title-dot pink-dot border-pink'></view>
+  </view>
+</template>

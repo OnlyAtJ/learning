@@ -24,7 +24,9 @@
       </view>
       <button class="weui-btn back-pink font-white">给周边人制作</button>
       <button class="weui-btn back-white font-pink border-pink">给自己制作</button>
-      <view class='tc font-small mt10 font-gray-dark'>常见问题</view>
+      <!-- <view class='tc font-small mt10 font-gray-dark'>常见问题</view> -->
+      <import src="/pages/templates/footer" />
+      <template is="footer"></template>
     </view>
   </view>
 </page>

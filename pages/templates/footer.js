@@ -1,19 +1,11 @@
-// pages/account/info/index.js
+// pages/templates/footer.js
 Page({
 
   /**
    * 页面的初始数据
    */
   data: {
-    countries: ["女儿", "儿子"],
-    countryIndex: 0,
-  },
-  bindCountryChange: function (e) {
-    console.log('picker country 发生选择改变，携带值为', e.detail.value);
-
-    this.setData({
-      countryIndex: e.detail.value
-    })
+  
   },
 
   /**

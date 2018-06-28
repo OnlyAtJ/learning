@@ -32,18 +32,25 @@
 			"list": []
 		},
 		"miniprogram": {
-			"current": 1,
+			"current": 0,
 			"list": [
 				{
 					"id": -1,
 					"name": "用户中心",
-					"pathName": "pages/account/info/index",
+					"pathName": "pages/account/info/info",
 					"query": ""
 				},
 				{
 					"id": -1,
 					"name": "制作名片",
-					"pathName": "pages/card/index/index"
+					"pathName": "pages/card/index/index",
+					"query": ""
+				},
+				{
+					"id": -1,
+					"name": "择偶要求",
+					"pathName": "pages/account/demand/demand",
+					"query": ""
 				}
 			]
 		}
