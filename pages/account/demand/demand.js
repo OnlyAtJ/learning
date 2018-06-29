@@ -7,10 +7,36 @@ Page({
   data: {
     ages: ["22-26", "27-35", ">35", "不限"],
     ageIndex: 0,
+
+
+    heights: app.data.heights,
+
+    educations: app.data.educations,
+    educationIndex: app.data.educationDefaultIndex,
+
+
+    region: [], //所在城市
+
+    describtion: '' //相亲宣言
   },
   bindAgeChange: function(e) {
     this.setData({
       ageIndex: e.detail.value
+    })
+  },
+  bindHeightChange: function(e) {
+    this.setData({
+      heightIndex: e.detail.value
+    })
+  },
+  bindEducationChange: function(e) {
+    this.setData({
+      educationIndex: e.detail.value
+    })
+  },
+  bindRegionChange: function(e) {
+    this.setData({
+      region: e.detail.value
     })
   },
   /**
