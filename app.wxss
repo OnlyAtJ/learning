@@ -171,6 +171,13 @@ button.font-white {
   width: 370rpx;
 }
 
+.weui-cells-pink .weui-cell .weui-textarea {
+  background-color: #f8f8f8;
+  border: 1rpx solid #ccc;
+  border-radius: 16rpx;
+  padding: 10rpx 20rpx;
+  width: 370rpx;
+}
 .weui-cells-pink .weui-cell__ft.info {
   position: absolute;
   right: 50rpx;

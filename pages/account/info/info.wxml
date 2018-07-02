@@ -33,7 +33,9 @@
 
         <view class="weui-cell weui-cell_select">
           <view class="weui-cell__hd weui-cell__hd_in-select-after">
-            <view class="weui-label">身高:</view>
+            <view class="weui-label">
+              <text space="ensp">身    高:</text>
+            </view>
           </view>
           <view class="weui-cell__bd">
             <picker bindchange="bindHeightChange" value="{{heightIndex}}" range="{{heights}}">
@@ -111,7 +113,9 @@
 
         <view class="weui-cell weui-cell_select">
           <view class="weui-cell__hd weui-cell__hd_in-select-after">
-            <view class="weui-label">月收入:</view>
+            <view class="weui-label">
+              <text space="ensp">月 收 入:</text>
+            </view>
           </view>
           <view class="weui-cell__bd">
             <picker bindchange="bindIncomeStatusChange" value="{{incomeIndex}}" range="{{incomes}}">
@@ -123,7 +127,9 @@
 
         <view class="weui-cell weui-cell_select">
           <view class="weui-cell__hd weui-cell__hd_in-select-after">
-            <view class="weui-label">体重:</view>
+            <view class="weui-label">
+              <text space="ensp">体    重:</text>
+            </view>
           </view>
           <view class="weui-cell__bd">
             <picker bindchange="bindWeightChange" value="{{weightIndex}}" range="{{weights}}">
@@ -137,7 +143,9 @@
 
         <view class="weui-cell weui-cell_input">
           <view class="weui-cell__hd">
-            <view class="weui-label">籍贯:</view>
+            <view class="weui-label">
+              <text space="ensp">籍    贯:</text>
+            </view>
           </view>
           <view class="weui-cell__bd">
             <picker mode="region" value="{{nativePlace}}" bindchange="bindNativePlaceChange">
@@ -148,7 +156,9 @@
 
         <view class="weui-cell weui-cell_select">
           <view class="weui-cell__hd weui-cell__hd_in-select-after">
-            <view class="weui-label">职位:</view>
+            <view class="weui-label">
+              <text space="ensp">职    位:</text>
+            </view>
           </view>
           <view class="weui-cell__bd">
             <picker bindchange="bindPositionChange" value="{{positionIndex}}" range="{{positions}}">
@@ -168,7 +178,20 @@
           </view>
         </view>
 
+        <view class="weui-cell weui-cell_input">
+          <view class="weui-cell__hd">
+            <view class="weui-label">我的微信:</view>
+          </view>
+          <view class="weui-cell__bd">
+            <input class="weui-input" placeholder="请输入微信号码" />
+          </view>
+        </view>
+
+
       </view>
+
+      <button class="weui-btn back-pink font-white">下一步</button>
+
     </view>
   </view>
 </page>
