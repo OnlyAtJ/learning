@@ -6,70 +6,80 @@
 
       <view class="weui-cells weui-cells_after-title  weui-cells-pink mt20">
 
-
-
-        <view class="weui-cell weui-cell_input">
-          <view class="weui-cell__hd">
-            <view class="weui-label">年龄</view>
+        <view class="weui-cell weui-cell_select">
+          <view class="weui-cell__hd weui-cell__hd_in-select-after">
+            <view class="weui-label">
+              <text space="ensp">年    龄:</text>
+            </view>
           </view>
           <view class="weui-cell__bd">
-            <picker mode="selector" value="{{ageIndex}}"  bindchange="bindAgeChange"  range="{{ages}}">
-              <view class="weui-input">{{ages[ageIndex]}}岁</view>
+            <picker bindchange="bindAgeChange" value="{{ageIndex}}" range="{{ages}}">
+              <view class="weui-select weui-select_in-select-after">
+                {{ages[ageIndex]}}
+                <text wx:if="{{ageIndex>=0}}"> 岁</text>
+              </view>
             </picker>
           </view>
         </view>
 
-
         <view class="weui-cell weui-cell_select">
           <view class="weui-cell__hd weui-cell__hd_in-select-after">
-            <view class="weui-label">身高:</view>
+            <view class="weui-label">
+              <text space="ensp">神    高:</text>
+            </view>
           </view>
           <view class="weui-cell__bd">
             <picker bindchange="bindHeightChange" value="{{heightIndex}}" range="{{heights}}">
-              <view class="weui-select weui-select_in-select-after">{{heights[heightIndex]}}</view>
+              <view class="weui-select weui-select_in-select-after">
+                {{heights[heightIndex]}}
+                <text wx:if="{{heightIndex>=0}}"> cm</text>
+              </view>
             </picker>
           </view>
-          <view class="weui-cell__bd font-pink ml10">*</view>
         </view>
 
         <view class="weui-cell weui-cell_select">
           <view class="weui-cell__hd weui-cell__hd_in-select-after">
-            <view class="weui-label"><text space="ensp">学    历:</text></view>
+            <view class="weui-label">
+              <text space="ensp">学    历:</text>
+            </view>
           </view>
           <view class="weui-cell__bd">
             <picker bindchange="bindEducationChange" value="{{educationIndex}}" range="{{educations}}">
               <view class="weui-select weui-select_in-select-after">{{educations[educationIndex]}}</view>
             </picker>
           </view>
-           <view class="weui-cell__bd font-pink ml10">*</view>
         </view>
 
-        <view class="weui-cell weui-cell_input">
-          <view class="weui-cell__hd">
-            <view class="weui-label">所在城市:</view>
+
+
+        <view class="weui-cell weui-cell_select">
+          <view class="weui-cell__hd weui-cell__hd_in-select-after">
+            <view class="weui-label">
+              <text space="ensp">所在城市:</text>
+            </view>
           </view>
           <view class="weui-cell__bd">
-            <picker mode="region" value="{{region}}" bindchange="bindRegionChange">
-              <view class="weui-input">{{region}}</view>
+            <picker mode="region" bindchange="bindRegionChange" value="{{region}}">
+              <view class="weui-select weui-select_in-select-after ">{{region}}</view>
             </picker>
           </view>
-           <view class="weui-cell__bd font-pink ml10">*</view>
         </view>
 
-
-        <view class="weui-cells__title">相亲宣言:</view>
-        <view class="weui-cells weui-cells_after-title">
-            <view class="weui-cell">
-                <view class="weui-cell__bd">
-                    <textarea class="weui-textarea" placeholder="自我介绍，对另一半的期待" style="height: 3.3em" />
-                    {{describtion}}
-                    <!-- <view class="weui-textarea-counter">0/200</view> -->
-                </view>
-            </view>
+        <view class="weui-cell weui-cell_input mt10">
+          <view class="weui-cell__hd ">
+            <view class="weui-label ">相亲宣言:</view>
+          </view>
+          <view class="weui-cell__bd ">
+            <textarea class="weui-textarea " placeholder="自我介绍，对另一半的期待 " style="height:6em " /> {{describtion}}
+          </view>
         </view>
 
       </view>
 
+      <button class="weui-btn back-pink font-white">生成相亲名片</button>
+      <import src="/pages/templates/footer" />
+      <template is="footer"></template>
     </view>
   </view>
 </page>

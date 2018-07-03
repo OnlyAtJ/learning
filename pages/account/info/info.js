@@ -20,7 +20,7 @@ Page({
 
     region: [], //所在城市
 
-    nativePlace:[],//籍贯
+    nativePlace: [], //籍贯
 
     maritalStatuses: app.data.maritalStatuses, //婚姻状况
     maritalStatusIndex: -1,
@@ -35,6 +35,15 @@ Page({
     weightIndex: app.data.femaleDefaultIndex,
 
     heights: app.data.heights,
+    heightIndex: -1,
+
+    positions: app.data.positions,
+    positionIndex: -1,
+
+    economics: app.data.economics,
+    economicIndex: -1,
+
+    required: ['relationIndex', 'birthMonth', 'heightIndex', 'educationIndex', 'region', 'maritalStatusIndex', 'jobIndex', 'incomeIndex'],
   },
 
   bindMonthChange: function(e) {
@@ -58,7 +67,7 @@ Page({
       region: e.detail.value
     })
   },
-  bindNativePlaceChange: function (e) {
+  bindNativePlaceChange: function(e) {
     this.setData({
       nativePlace: e.detail.value
     })
@@ -72,20 +81,30 @@ Page({
     this.setData({
       jobIndex: e.detail.value
     })
-  }, 
-  bindIncomeStatusChange: function (e) {
+  },
+  bindIncomeStatusChange: function(e) {
     this.setData({
       incomeIndex: e.detail.value
     })
   },
-  bindWeightChange: function (e) {
+  bindWeightChange: function(e) {
     this.setData({
       weightIndex: e.detail.value
     })
   },
-  bindHeightChange: function (e) {
+  bindHeightChange: function(e) {
     this.setData({
       heightIndex: e.detail.value
+    })
+  },
+  bindPositionChange: function(e) {
+    this.setData({
+      positionIndex: e.detail.value
+    })
+  },
+  bindeEconomicChange: function(e) {
+    this.setData({
+      economicIndex: e.detail.value
     })
   },
   /**

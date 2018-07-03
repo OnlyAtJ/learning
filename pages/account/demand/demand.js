@@ -1,4 +1,6 @@
 // pages/account/demand/demand.js
+
+var app = getApp();
 Page({
 
   /**

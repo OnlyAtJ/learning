@@ -1,16 +1,16 @@
   //app.js
 
-var $weights = ['<40'];
-var $i = 40;
-for ($i; $i <= 80; $i++) {
-  $weights.push($i);
-}
-$weights.push('>80');
+  var $weights = ['<40'];
+  var $i = 40;
+  for ($i; $i <= 80; $i++) {
+    $weights.push($i);
+  }
+  $weights.push('>80');
 
-var heights =[];
-for(var $i=140;$i<=230;$i++){
-  $weights.push($i);
-}
+  var $heights = [];
+  for (var $i = 140; $i <= 230; $i++) {
+    $heights.push($i);
+  }
 
   App({
     data: {
@@ -22,10 +22,11 @@ for(var $i=140;$i<=230;$i++){
       jobs: ['个体户', '民营企业', '合资/外企', '国企/央企', '事业单位', '公务员'], //单位性质 选项
       incomes: ['3000~5000', '5000~8000', '8000~12000', '12000~20000', '>20000'], //月收入 选项
       positions: ['普通员工', '中层经理', '高管', '老板'], //职位
-      weights: $weights,//体重
-      femaleDefaultIndex: 11,//女生默认体重50
-      maleDefaultIndex: 26,//男生默认体重65
-      heights:$heights,//身高
+      weights: $weights, //体重
+      femaleDefaultIndex: 11, //女生默认体重50
+      maleDefaultIndex: 26, //男生默认体重65
+      heights: $heights, //身高
+      economics: ["有房有贷", "有房无贷", "无房"], //经济实力 选项
     },
 
 
