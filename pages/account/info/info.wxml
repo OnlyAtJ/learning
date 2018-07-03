@@ -27,7 +27,8 @@
             <radio-group class="sexGroup" bindchange="bindSexChange">
               <view class="attr_value" wx:for="{{sexs}}">
                 <radio value="{{item.value}}" checked="{{item.checked}}" id='{{item.option}}' />
-                <label class="radio-img-label img-{{item.option}}{{sexChecked==item.option?'-checked':''}}">
+                <label style='postion:relative' class="radio-img-label img-{{item.option}}{{sexChecked==item.option?'-checked':''}}">
+                  <text class='radio-img-text'> {{item.ch}}</text>
                 </label>
               </view>
             </radio-group>
