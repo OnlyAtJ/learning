@@ -27,6 +27,13 @@
       maleDefaultIndex: 26, //男生默认体重65
       heights: $heights, //身高
       economics: ["有房有贷", "有房无贷", "无房"], //经济实力 选项
+      sexs: [{
+        "value": '0',
+        "option": 'male'
+      }, {
+        "value": '1',
+        "option": 'female'
+      }], //性别选项
     },
 
 

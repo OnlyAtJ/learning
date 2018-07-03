@@ -19,210 +19,194 @@
           <view class="weui-cell__bd font-pink ml10">*</view>
         </view>
 
-        <radio-group class="group">
-          <view class="attr_value">
-            <radio color=''></radio>
-            <label class='radio_label'>颜色</label>
-          </view>
-        </radio-group>
         <view class="weui-cell weui-cell_select">
           <view class="weui-cell__hd weui-cell__hd_in-select-after">
             <view class="weui-label">TA的性别:</view>
           </view>
           <view class="weui-cell__bd">
-
-            <radio-group class="group" bindchange="radioChange">
-
-              <view class="attr_value">
-                <radio value="male" id='male' />
-                <label class='radio_label img-male'>
-                  <!-- <image src='/images/male.png' style='width:150rpx;height:150rpx;'></image> -->
-                </label>
-              </view>
-                <view class="attr_value">
-                <radio value="female" id='female' />
-                <label class='radio_label img-female'>
-                  <!-- <image src='/images/female.png' style='width:150rpx;height:150rpx;'></image> -->
+            <radio-group class="sexGroup" bindchange="bindSexChange">
+              <view class="attr_value" wx:for="{{sexs}}">
+                <radio value="{{item.value}}" checked="{{item.checked}}" id='{{item.option}}' />
+                <label class="radio-img-label img-{{item.option}}{{sexChecked==item.option?'-checked':''}}">
                 </label>
               </view>
             </radio-group>
-
           </view>
-          <view class="weui-cell__bd font-pink ml10">*</view>
+          <view class="weui-cell__bd font-pink ml10 ">*</view>
         </view>
 
-        <view class="weui-cell weui-cell_input">
-          <view class="weui-cell__hd">
-            <view class="weui-label">出生日期:</view>
+        <view class="weui-cell weui-cell_input ">
+          <view class="weui-cell__hd ">
+            <view class="weui-label ">出生日期:</view>
           </view>
-          <view class="weui-cell__bd">
-            <picker mode="date" value="{{birthMonth}}" start="{{monthStart}}" end="{{monthEnd}}" fields='month' bindchange="bindMonthChange">
-              <view class="weui-input">{{birthMonth}}</view>
+          <view class="weui-cell__bd ">
+            <picker mode="date " value="{{birthMonth}} " start="{{monthStart}} " end="{{monthEnd}} " fields='month' bindchange="bindMonthChange ">
+              <view class="weui-input ">{{birthMonth}}</view>
             </picker>
           </view>
-          <view class="weui-cell__bd font-pink ml10">*</view>
+          <view class="weui-cell__bd font-pink ml10 ">*</view>
         </view>
 
-        <view class="weui-cell weui-cell_select">
-          <view class="weui-cell__hd weui-cell__hd_in-select-after">
-            <view class="weui-label">
-              <text space="ensp">身    高:</text>
+        <view class="weui-cell weui-cell_select ">
+          <view class="weui-cell__hd weui-cell__hd_in-select-after ">
+            <view class="weui-label ">
+              <text space="ensp ">身    高:</text>
             </view>
           </view>
-          <view class="weui-cell__bd">
-            <picker bindchange="bindHeightChange" value="{{heightIndex}}" range="{{heights}}">
-              <view class="weui-select weui-select_in-select-after">
+          <view class="weui-cell__bd ">
+            <picker bindchange="bindHeightChange " value="{{heightIndex}} " range="{{heights}} ">
+              <view class="weui-select weui-select_in-select-after ">
                 {{heights[heightIndex]}}
-                <text wx:if="{{heightIndex!=-1}}">cm</text>
+                <text wx:if="{{heightIndex!=-1}} ">cm</text>
               </view>
             </picker>
           </view>
-          <view class="weui-cell__bd font-pink ml10">*</view>
+          <view class="weui-cell__bd font-pink ml10 ">*</view>
         </view>
 
-        <!--<view class="weui-cell weui-cell_input">
-          <view class="weui-cell__hd">
-            <view class="weui-label"><text space="ensp">身    高:</text></view>
+        <!--<view class="weui-cell weui-cell_input ">
+          <view class="weui-cell__hd ">
+            <view class="weui-label "><text space="ensp ">身    高:</text></view>
           </view>
-          <view class="weui-cell__bd">
-            <input class="weui-input " type='number' placeholder="请输入身高" />
+          <view class="weui-cell__bd ">
+            <input class="weui-input " type='number' placeholder="请输入身高 " />
           </view>
-           <view class='weui-cell__ft info' style="">
+           <view class='weui-cell__ft info' style=" ">
             cm
           </view> 
-           <view class="weui-cell__bd font-pink ml10">*</view>
+           <view class="weui-cell__bd font-pink ml10 ">*</view>
         </view>-->
 
-        <view class="weui-cell weui-cell_select">
-          <view class="weui-cell__hd weui-cell__hd_in-select-after">
-            <view class="weui-label">
-              <text space="ensp">学    历:</text>
+        <view class="weui-cell weui-cell_select ">
+          <view class="weui-cell__hd weui-cell__hd_in-select-after ">
+            <view class="weui-label ">
+              <text space="ensp ">学    历:</text>
             </view>
           </view>
-          <view class="weui-cell__bd">
-            <picker bindchange="bindEducationChange" value="{{educationIndex}}" range="{{educations}}">
-              <view class="weui-select weui-select_in-select-after">{{educations[educationIndex]}}</view>
+          <view class="weui-cell__bd ">
+            <picker bindchange="bindEducationChange " value="{{educationIndex}} " range="{{educations}} ">
+              <view class="weui-select weui-select_in-select-after ">{{educations[educationIndex]}}</view>
             </picker>
           </view>
-          <view class="weui-cell__bd font-pink ml10">*</view>
+          <view class="weui-cell__bd font-pink ml10 ">*</view>
         </view>
 
-        <view class="weui-cell weui-cell_input">
-          <view class="weui-cell__hd">
-            <view class="weui-label">所在城市:</view>
+        <view class="weui-cell weui-cell_input ">
+          <view class="weui-cell__hd ">
+            <view class="weui-label ">所在城市:</view>
           </view>
-          <view class="weui-cell__bd">
-            <picker mode="region" value="{{region}}" bindchange="bindRegionChange">
-              <view class="weui-input">{{region}}</view>
+          <view class="weui-cell__bd ">
+            <picker mode="region " value="{{region}} " bindchange="bindRegionChange ">
+              <view class="weui-input ">{{region}}</view>
             </picker>
           </view>
-          <view class="weui-cell__bd font-pink ml10">*</view>
+          <view class="weui-cell__bd font-pink ml10 ">*</view>
         </view>
 
-        <view class="weui-cell weui-cell_select">
-          <view class="weui-cell__hd weui-cell__hd_in-select-after">
-            <view class="weui-label">婚姻状况:</view>
+        <view class="weui-cell weui-cell_select ">
+          <view class="weui-cell__hd weui-cell__hd_in-select-after ">
+            <view class="weui-label ">婚姻状况:</view>
           </view>
-          <view class="weui-cell__bd">
-            <picker bindchange="bindMaritalStatusChange" value="{{maritalStatusIndex}}" range="{{maritalStatuses}}">
-              <view class="weui-select weui-select_in-select-after">{{maritalStatuses[maritalStatusIndex]}}</view>
+          <view class="weui-cell__bd ">
+            <picker bindchange="bindMaritalStatusChange " value="{{maritalStatusIndex}} " range="{{maritalStatuses}} ">
+              <view class="weui-select weui-select_in-select-after ">{{maritalStatuses[maritalStatusIndex]}}</view>
             </picker>
           </view>
-          <view class="weui-cell__bd font-pink ml10">*</view>
+          <view class="weui-cell__bd font-pink ml10 ">*</view>
         </view>
 
-        <view class="weui-cell weui-cell_select">
-          <view class="weui-cell__hd weui-cell__hd_in-select-after">
-            <view class="weui-label">单位性质:</view>
+        <view class="weui-cell weui-cell_select ">
+          <view class="weui-cell__hd weui-cell__hd_in-select-after ">
+            <view class="weui-label ">单位性质:</view>
           </view>
-          <view class="weui-cell__bd">
-            <picker bindchange="bindJobStatusChange" value="{{jobIndex}}" range="{{jobs}}">
-              <view class="weui-select weui-select_in-select-after">{{jobs[jobIndex]}}</view>
+          <view class="weui-cell__bd ">
+            <picker bindchange="bindJobStatusChange " value="{{jobIndex}} " range="{{jobs}} ">
+              <view class="weui-select weui-select_in-select-after ">{{jobs[jobIndex]}}</view>
             </picker>
           </view>
-          <view class="weui-cell__bd font-pink ml10">*</view>
+          <view class="weui-cell__bd font-pink ml10 ">*</view>
         </view>
 
-        <view class="weui-cell weui-cell_select">
-          <view class="weui-cell__hd weui-cell__hd_in-select-after">
-            <view class="weui-label">
-              <text space="ensp">月 收 入:</text>
+        <view class="weui-cell weui-cell_select ">
+          <view class="weui-cell__hd weui-cell__hd_in-select-after ">
+            <view class="weui-label ">
+              <text space="ensp ">月 收 入:</text>
             </view>
           </view>
-          <view class="weui-cell__bd">
-            <picker bindchange="bindIncomeStatusChange" value="{{incomeIndex}}" range="{{incomes}}">
-              <view class="weui-select weui-select_in-select-after">{{incomes[incomeIndex]}}</view>
+          <view class="weui-cell__bd ">
+            <picker bindchange="bindIncomeStatusChange " value="{{incomeIndex}} " range="{{incomes}} ">
+              <view class="weui-select weui-select_in-select-after ">{{incomes[incomeIndex]}}</view>
             </picker>
           </view>
-          <view class="weui-cell__bd font-pink ml10">*</view>
+          <view class="weui-cell__bd font-pink ml10 ">*</view>
         </view>
 
-        <view class="weui-cell weui-cell_select">
-          <view class="weui-cell__hd weui-cell__hd_in-select-after">
-            <view class="weui-label">
-              <text space="ensp">体    重:</text>
+        <view class="weui-cell weui-cell_select ">
+          <view class="weui-cell__hd weui-cell__hd_in-select-after ">
+            <view class="weui-label ">
+              <text space="ensp ">体    重:</text>
             </view>
           </view>
-          <view class="weui-cell__bd">
-            <picker bindchange="bindWeightChange" value="{{weightIndex}}" range="{{weights}}">
-              <view class="weui-select weui-select_in-select-after">
+          <view class="weui-cell__bd ">
+            <picker bindchange="bindWeightChange " value="{{weightIndex}} " range="{{weights}} ">
+              <view class="weui-select weui-select_in-select-after ">
                 {{weights[weightIndex]}}
-                <text wx:if="{{weightIndex!=-1}}">kg</text>
+                <text wx:if="{{weightIndex!=-1}} ">kg</text>
               </view>
             </picker>
           </view>
         </view>
 
-        <view class="weui-cell weui-cell_input">
-          <view class="weui-cell__hd">
-            <view class="weui-label">
-              <text space="ensp">籍    贯:</text>
+        <view class="weui-cell weui-cell_input ">
+          <view class="weui-cell__hd ">
+            <view class="weui-label ">
+              <text space="ensp ">籍    贯:</text>
             </view>
           </view>
-          <view class="weui-cell__bd">
-            <picker mode="region" value="{{nativePlace}}" bindchange="bindNativePlaceChange">
-              <view class="weui-input">{{nativePlace}}</view>
+          <view class="weui-cell__bd ">
+            <picker mode="region " value="{{nativePlace}} " bindchange="bindNativePlaceChange ">
+              <view class="weui-input ">{{nativePlace}}</view>
             </picker>
           </view>
         </view>
 
-        <view class="weui-cell weui-cell_select">
-          <view class="weui-cell__hd weui-cell__hd_in-select-after">
-            <view class="weui-label">
-              <text space="ensp">职    位:</text>
+        <view class="weui-cell weui-cell_select ">
+          <view class="weui-cell__hd weui-cell__hd_in-select-after ">
+            <view class="weui-label ">
+              <text space="ensp ">职    位:</text>
             </view>
           </view>
-          <view class="weui-cell__bd">
-            <picker bindchange="bindPositionChange" value="{{positionIndex}}" range="{{positions}}">
-              <view class="weui-select weui-select_in-select-after">{{positions[positionIndex]}}</view>
+          <view class="weui-cell__bd ">
+            <picker bindchange="bindPositionChange " value="{{positionIndex}} " range="{{positions}} ">
+              <view class="weui-select weui-select_in-select-after ">{{positions[positionIndex]}}</view>
             </picker>
           </view>
         </view>
 
-        <view class="weui-cell weui-cell_select">
-          <view class="weui-cell__hd weui-cell__hd_in-select-after">
-            <view class="weui-label">经济实力:</view>
+        <view class="weui-cell weui-cell_select ">
+          <view class="weui-cell__hd weui-cell__hd_in-select-after ">
+            <view class="weui-label ">经济实力:</view>
           </view>
-          <view class="weui-cell__bd">
-            <picker bindchange="bindeEconomicChange" value="{{economicIndex}}" range="{{economics}}">
-              <view class="weui-select weui-select_in-select-after">{{economics[economicIndex]}}</view>
+          <view class="weui-cell__bd ">
+            <picker bindchange="bindeEconomicChange " value="{{economicIndex}} " range="{{economics}} ">
+              <view class="weui-select weui-select_in-select-after ">{{economics[economicIndex]}}</view>
             </picker>
           </view>
         </view>
 
-        <view class="weui-cell weui-cell_input">
-          <view class="weui-cell__hd">
-            <view class="weui-label">我的微信:</view>
+        <view class="weui-cell weui-cell_input ">
+          <view class="weui-cell__hd ">
+            <view class="weui-label ">我的微信:</view>
           </view>
-          <view class="weui-cell__bd">
-            <input class="weui-input" placeholder="请输入微信号码" />
+          <view class="weui-cell__bd ">
+            <input class="weui-input " placeholder="请输入微信号码 " />
           </view>
         </view>
 
 
       </view>
 
-      <button class="weui-btn back-pink font-white">下一步</button>
+      <button class="weui-btn back-pink font-white ">下一步</button>
 
     </view>
   </view>

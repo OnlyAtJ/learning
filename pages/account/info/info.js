@@ -11,6 +11,10 @@ Page({
     relations: app.data.relations,
     relationIndex: -1,
 
+    sexs: app.data.sexs,
+    sexIndex: -1,
+    sexChecked: '',
+
     birthMonth: '',
     monthStart: '1990-01', //选择月份 开始值
     monthEnd: nowDate.getFullYear() + '-' + nowDate.getMonth(), //选择月份 结束值
@@ -55,6 +59,14 @@ Page({
   bindRelationChange: function(e) {
     this.setData({
       relationIndex: e.detail.value
+    })
+  },
+
+  bindSexChange: function(e) {
+    var _this = this;
+    this.setData({
+      sexIndex: e.detail.value,
+      sexChecked: _this.data.sexs[e.detail.value]['option']
     })
   },
   bindEducationChange: function(e) {
