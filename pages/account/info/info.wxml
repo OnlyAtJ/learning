@@ -19,6 +19,38 @@
           <view class="weui-cell__bd font-pink ml10">*</view>
         </view>
 
+        <radio-group class="group">
+          <view class="attr_value">
+            <radio color=''></radio>
+            <label class='radio_label'>颜色</label>
+          </view>
+        </radio-group>
+        <view class="weui-cell weui-cell_select">
+          <view class="weui-cell__hd weui-cell__hd_in-select-after">
+            <view class="weui-label">TA的性别:</view>
+          </view>
+          <view class="weui-cell__bd">
+
+            <radio-group class="group" bindchange="radioChange">
+
+              <view class="attr_value">
+                <radio value="male" id='male' />
+                <label class='radio_label img-male'>
+                  <!-- <image src='/images/male.png' style='width:150rpx;height:150rpx;'></image> -->
+                </label>
+              </view>
+                <view class="attr_value">
+                <radio value="female" id='female' />
+                <label class='radio_label img-female'>
+                  <!-- <image src='/images/female.png' style='width:150rpx;height:150rpx;'></image> -->
+                </label>
+              </view>
+            </radio-group>
+
+          </view>
+          <view class="weui-cell__bd font-pink ml10">*</view>
+        </view>
+
         <view class="weui-cell weui-cell_input">
           <view class="weui-cell__hd">
             <view class="weui-label">出生日期:</view>
