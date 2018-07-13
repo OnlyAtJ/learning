@@ -153,6 +153,7 @@ button.font-white {
 .weui-cells-pink .weui-cell {
   line-height: 140rpx;
   color: #666;
+  margin-top: 20rpx;
 }
 
 .weui-cells-pink .weui-cell .weui-select_in-select-after {
@@ -185,70 +186,60 @@ button.font-white {
   z-index: 2;
 }
 
+.radio-img-label {
+  display: inline-block;
+  width: 150rpx;
+  height: 150rpx;
+}
+
+.sexGroup {
+  display: block;
+  width: 410rpx;
+}
 
 .attr_value {
-      float: left;
-      margin-right:20rpx;
-      position: relative;
-}
-.radio_label{
-      display: block;
-      padding:0 24rpx;
-      height: 40rpx;
-      line-height: 40rpx;
-}
-/*radio默认样式重置*/
-radio {
-      box-sizing: border-box;
-      background: none;
-      position: absolute;
-      width: 100%;
-      height: 100%;
-      top:0;
-      left:0;
-}
- 
-radio .wx-radio-input {
-      margin-right: 15rpx;
-      position: absolute;
-      width: 100%;
-      height: 100%;
-      top:0;
-      left:0;
-      background: none;
-      border-radius: 6rpx;
-      box-sizing: border-box;
-}
- 
-radio .wx-radio-input.wx-radio-input-checked {
-      background-color:transparent;
-      border-color:#FF2150;
-      overflow: hidden;
-      box-sizing: border-box;
-}
- 
-radio .wx-radio-input.wx-radio-input-checked::before {
-      content: '\e60d';
-      font-family:"iconfont" !important;
-      font-size:30rpx;
-      color: #FF2150;
-      top:auto;
-      left:auto;
-      right:-4rpx;
-      bottom:-4rpx;
-      transform:translate(0, 0) scale(1);
-      -webkit-transform:translate(0, 0) scale(1);
-}
-/*radio默认样式重置*/
-
-.img-male {
-  display: inline-block;
+  position: relative;
   width: 150rpx;
-  height: 150rpx;
+  height: 200rpx;
+  float: left;
+  margin-left: 8%;
 }
 
-.img-female {
-  display: inline-block;
+.radio-img-label .radio-img-text {
+  position: absolute;
+  bottom: -50rpx;
+  width: 100%;
+  text-align: center;
+}
+
+.attr_value radio {
+  position: absolute;
   width: 150rpx;
   height: 150rpx;
+  opacity: 1;
+  top: 0;
+  left: 0;
+}
+
+.attr_value radio .wx-radio-input {
+  border-radius: 50%;
+  height: 150rpx;
+  width: 150rpx;
+  background: none;
+  border: none;
+}
+
+.attr_value radio .wx-radio-input::checked {
+  border-radius: 50%;
+  height: 150rpx;
+  width: 150rpx;
+  background-color: transparent !important;
+}
+
+.attr_value radio .wx-radio-input.wx-radio-input-checked {
+  background-color: transparent !important;
+}
+
+.attr_value radio .wx-radio-input.wx-radio-input-checked::before {
+  background-color: transparent !important;
 }
